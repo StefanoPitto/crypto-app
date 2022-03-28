@@ -1,6 +1,6 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {SimpleToken} from '../interfaces/interfaces';
 
 interface Props {
@@ -12,7 +12,7 @@ export const SearchOption = ({data}: Props) => {
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => navigator.navigate('CryptoDetailScreen')}>
+      onPress={() => navigator.navigate('CryptoDetailScreen', data.id)}>
       <Text style={styles.info}>{data.name}</Text>
     </TouchableOpacity>
   );

@@ -5,6 +5,9 @@ import {StyleSheet} from 'react-native';
 import {HomeStackNavigator} from '../stackNavigators/HomeStackNavigator';
 import {TrendingStackNavigator} from '../stackNavigators/TrendingStackNavigator';
 import {TopStackNavigator} from '../stackNavigators/TopStackNavigator';
+import {HomeScreen} from '../screens/HomeScreen';
+import {TrendingScreen} from '../screens/TrendingScreen';
+import {TopScreen} from '../screens/TopScreen';
 export type RootStackParams = {
   HomeStackNavigator: undefined;
   TrendingStackNavigator: undefined;
@@ -39,17 +42,17 @@ export const TabsNavigator = () => {
       <Tab.Screen
         name="HomeStackNavigator"
         options={{title: 'Home'}}
-        component={HomeStackNavigator}
+        component={HomeScreen}
       />
       <Tab.Screen
         name="TrendingStackNavigator"
         options={{title: 'Trending'}}
-        component={TrendingStackNavigator}
+        component={TrendingScreen}
       />
       <Tab.Screen
         name="TopStackNavigator"
         options={{title: 'Top'}}
-        component={TopStackNavigator}
+        component={TopScreen}
       />
     </Tab.Navigator>
   );

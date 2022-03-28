@@ -2,13 +2,9 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HomeScreen} from '../screens/HomeScreen';
 import {CryptoDetailScreen} from '../screens/CryptoDetailScreen';
+import {RootStackParamsHome} from '../interfaces/interfaces';
 
-export type RootStackParams = {
-  HomeScreen: undefined;
-  CryptoDetailScreen: undefined;
-};
-
-const Stack = createNativeStackNavigator<RootStackParams>();
+const Stack = createNativeStackNavigator<RootStackParamsHome>();
 
 export const HomeStackNavigator = () => {
   return (

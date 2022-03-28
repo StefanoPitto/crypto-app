@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+
 import {Token} from '../interfaces/interfaces';
 
 interface Props {
@@ -12,7 +12,8 @@ export const TokenListItem = ({data}: Props) => {
   const navigator = useNavigation<any>();
 
   return (
-    <TouchableOpacity onPress={() => navigator.navigate('CryptoDetailScreen')}>
+    <TouchableOpacity
+      onPress={() => navigator.navigate('CryptoDetailScreen', data.id)}>
       <View style={styles.container}>
         <Text style={styles.rank}>#{data.market_cap_rank}</Text>
         <View style={styles.imageContainer}>
@@ -26,6 +27,10 @@ export const TokenListItem = ({data}: Props) => {
 };
 
 const styles = StyleSheet.create({
+  asd: {
+    borderColor: 'red',
+    borderWidth: 2,
+  },
   container: {
     flex: 1,
     flexDirection: 'row',

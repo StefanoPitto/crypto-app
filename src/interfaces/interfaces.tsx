@@ -71,3 +71,17 @@ export enum Currency {
   Eth = 'eth',
   Usd = 'usd',
 }
+
+export type RootStackParamsHome = {
+  HomeScreen: undefined;
+  CryptoDetailScreen: string;
+};
+export type RootStackParamsTop = {
+  TopScreen: undefined;
+  CryptoDetailScreen: string;
+};
+
+export type RootStackParamsTrending = {
+  TrendingScreen: undefined;
+  CryptoDetailScreen: string;
+};

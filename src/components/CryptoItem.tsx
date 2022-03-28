@@ -1,7 +1,7 @@
 import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+
 import {Coin} from '../interfaces/interfaces';
 
 interface Props {
@@ -14,7 +14,7 @@ export const CryptoItem = ({data}: Props) => {
   return (
     <TouchableOpacity
       onPress={() => {
-        navigator.navigate('CryptoDetailScreen');
+        navigator.navigate('CryptoDetailScreen', data.item.id);
       }}>
       <View style={styles.container}>
         <Image style={styles.image} source={{uri: data.item.small}} />
